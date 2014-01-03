@@ -1,5 +1,5 @@
 #!/usr/local/bin/python
-from roll import Roll
+from lib.roll import Roll
 import time
 
 def doit():

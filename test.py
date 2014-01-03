@@ -1,8 +1,8 @@
 #!/usr/local/bin/python
 #from roll import Roll
-from roll import *
+from lib.roll import *
 #from level_progression import level_progression
-from level_progression import *
+from lib.level_progression import *
 
 print '\nTest Die Rolls:'
 r = Roll()

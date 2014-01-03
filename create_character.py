@@ -2,7 +2,7 @@
 # Run directly
 # Create Character metrics and display them
 import math
-from roll import Roll
+from lib.roll import Roll
 ################################################################################
 # Setup Variables
 LEVEL = float(1)
