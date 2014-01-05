@@ -4,12 +4,12 @@ import time
 
 def doit():
     r = Roll()
-    booger = [ r.dAttr(), r.dAttr(), r.dAttr(), r.dAttr(), r.dAttr(), r.dAttr() ]
-    #booger = [ r.dAttr(), r.dAttr(), r.dAttr(), r.dAttr(), r.dAttr() ]
-    #booger = [ r.dAttr(), r.dAttr(), r.dAttr(), r.dAttr() ]
-    booger.sort()
-    print "The List: ", booger
-    print "Best Score:                          ", booger[-1:][0]
+    bestof = [ r.dAttr(), r.dAttr(), r.dAttr(), r.dAttr(), r.dAttr(), r.dAttr() ]
+    #bestof = [ r.dAttr(), r.dAttr(), r.dAttr(), r.dAttr(), r.dAttr() ]
+    #bestof = [ r.dAttr(), r.dAttr(), r.dAttr(), r.dAttr() ]
+    bestof.sort()
+    print "The List: ", bestof
+    print "Best Score:                          ", bestof[-1:][0]
 
 while True:
     doit()
