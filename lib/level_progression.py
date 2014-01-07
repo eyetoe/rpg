@@ -17,12 +17,21 @@ def level_progression():
     progression = levels()
     lp = {}
 
-    for level in range(1, 21):
+    for level in range(1, 51):
         experience = progression.next()
         lp[level] = experience
     
     #print lp
     return lp
+
+################################################################################
+
+def get_level(exp):
+    levels = level_progression()
+    for key, value in levels.iteritems():
+        if exp >= value:
+            level = key
+    return level
 
 ################################################################################
 

@@ -1,5 +1,6 @@
 #!/usr/local/bin/python
 from lib.roll import Roll
+from lib.level_progression import get_level
 import time
 
 def skill_test(skill_exp, skill_level):
@@ -22,10 +23,10 @@ iteration = 1
 
 while True:
     skill_exp, skill_level = skill_test(skill_exp, skill_level)
-    if skill_exp >= 10:
-        skill_exp = 1
-        skill_level = skill_level + 1
-    #time.sleep(1)
+    skill_level = get_level(skill_exp)
+    #if skill_exp >= 10:
+    #    skill_exp = 1
+    #    skill_level = skill_level + 1
     time.sleep(.1)
     print 'Iteration Number ---------------: ', iteration
     iteration = iteration + 1
