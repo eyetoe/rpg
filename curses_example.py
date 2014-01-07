@@ -6,7 +6,7 @@ import curses
 def get_param(prompt_string):
     screen.clear()
     screen.border(0)
-    screen.addstr(2, 2, "Creating Character")
+    screen.addstr(2, 2, "Creating Character", curses.A_BOLD)
     screen.addstr(4, 2, prompt_string)
     screen.refresh()
     input = screen.getstr(10, 10, 60)
@@ -30,7 +30,7 @@ while x != ord('4'):
 
     screen.clear()
     screen.border(0)
-    screen.addstr(2, 2, "Welcome To Outland")
+    screen.addstr(2, 2, "Welcome To Outland", curses.A_BOLD)
     screen.addstr(3, 2, "  - Character Selection:")
     screen.addstr(4, 4, "   1 - Create")
     screen.addstr(5, 4, "   2 - Load")
