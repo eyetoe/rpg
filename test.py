@@ -1,4 +1,4 @@
-#!/usr/local/bin/python
+#!/usr/bin/env python
 #from roll import Roll
 from lib.roll import *
 #from level_progression import level_progression
