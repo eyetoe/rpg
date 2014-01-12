@@ -1,4 +1,4 @@
-#!/usr/local/bin/python
+#!/usr/bin/env python
 # Run directly
 # Create Character metrics and display them
 import math

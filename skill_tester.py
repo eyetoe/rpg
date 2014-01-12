@@ -1,4 +1,4 @@
-#!/usr/local/bin/python
+#!/usr/bin/env python
 from lib.roll import Roll
 from lib.level_progression import get_level
 import time
