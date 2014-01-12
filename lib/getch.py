@@ -4,21 +4,20 @@ import sys
 import termios
 import fcntl
 
-class _Getch:
+class Getch:
     def __init__(self):
         try:
-            self.impl = _myGetch()
+            self.impl = getch()
         except ImportError:
-            print 'exiting, cant call _myGetch()'
+            print 'exiting, cant call getch()'
 
     def __call_(self): return self.impl()
 
-class _myGetch:
+class getch:
     def __init__(self):
         import tty, sys
 
     def __call__(self):
-#def _myGetch():
         import os
         import sys    
         import termios
@@ -44,13 +43,32 @@ class _myGetch:
             fcntl.fcntl(fd, fcntl.F_SETFL, oldflags)
         return c
 
-if __name__ == '__main__': # a little test
+    def inkey():
+        print '...'
+        inkey = getch()
+        import sys
+        for i in xrange(sys.maxint):
+            k=inkey()
+            if inkey <>'':break
+        return k
+
+            
+# If called by itself run a little test
+if __name__ == '__main__':
    print 'Press a key'
-   inkey = _myGetch()
+   inkey = getch()
    import sys
    for i in xrange(sys.maxint):
       k=inkey()
       if inkey <>'':break
    print 'you pressed', k
    #print 'you pressed', inkey
+
+
+#groovy = inkey()
+#print 'groovy says you pressed: ', groovy
+
+
+
+
 

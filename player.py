@@ -24,3 +24,10 @@ player_melee = '17.0'
 player_stealth = '17.0'
 player_fireball = '15.0'
 player_ranged = '18.0'
+
+# INVENTORY
+
+# READIED WEAPONS
+player_melee = 'sword'
+player_ranged = 'shortbow'
+player_spell = 'fireball'
