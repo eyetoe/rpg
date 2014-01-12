@@ -47,7 +47,7 @@ ABILITY = {}
 ABILITY['stealth']          = math.ceil(SKILL['perception'] * LEVEL / 3)
 ABILITY['fireball']         = math.ceil(SKILL['arcana'] * LEVEL / 3)
 ABILITY['melee']            = math.ceil(((STATISTIC['attack'] + ATTRIBUTE['strength'])/2) * LEVEL / 3)
-ABILITY['range']            = math.ceil(((STATISTIC['attack'] + ATTRIBUTE['dexterity'])/2) * LEVEL / 3)
+ABILITY['ranged']           = math.ceil(((STATISTIC['attack'] + ATTRIBUTE['dexterity'])/2) * LEVEL / 3)
 
 ################################################################################
 

@@ -23,6 +23,9 @@ class Roll:
     def d4(self):
         return randint(1,4)
 
+    def d3(self):
+        return randint(1,3)
+
     def d2(self):
         return randint(1,2)
 
