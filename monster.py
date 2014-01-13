@@ -22,7 +22,7 @@ monster_athletics   = '52.0'
 monster_perception  = '50.0'
 
 # ABILITY
-monster_melee       = '17.0'
-monster_stealth     = '17.0'
-monster_fireball    = '15.0'
-monster_ranged      = '18.0'
+monster_melee       = '51.0'
+monster_stealth     = '51.0'
+monster_fireball    = '45.0'
+monster_ranged      = '54.0'

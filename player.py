@@ -20,14 +20,14 @@ player_athletics = '52.0'
 player_perception = '50.0'
 
 # ABILITY
-player_melee = '17.0'
-player_stealth = '17.0'
-player_fireball = '15.0'
-player_ranged = '18.0'
+player_melee = '51.0'
+player_stealth = '51.0'
+player_fireball = '45.0'
+player_ranged = '54.0'
 
 # INVENTORY
 
 # READIED WEAPONS
-player_melee = 'sword'
-player_ranged = 'shortbow'
-player_spell = 'fireball'
+player_ready_melee = 'sword'
+player_ready_ranged = 'shortbow'
+player_ready_spell = 'fireball'

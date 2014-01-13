@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+import sys
 from clint.textui import colored
 from player import *
 from monster import *
@@ -42,6 +43,9 @@ def fight_or_flight():
     elif k == 'a':
         print 'You begin your attack...'
         which_attack()
+    elif k == 'x':
+        print 'Exiting...'
+        sys.exit(0)
     else:
         fight_or_flight()
 
@@ -53,16 +57,37 @@ def which_attack():
     print 'Attack with: '+colored.cyan('(m)')+'elee, '+colored.cyan('(r)')+'anged, or '+colored.cyan('(s)')+'pell?'
     k = g()
     if k == 's':
-        print 'You channel arcane engergy to cast...', player_spell
+        print 'You channel arcane engergy to cast', player_ready_spell
+        current_attack = ( player_ready_spell, player_arcana )
+        does_it_hit(current_attack, monster_defence)
     elif k == 'r':
-        print 'You ready your...', player_ranged
+        print 'You ready your', player_ready_ranged
+        current_attack = ( player_ready_ranged, player_ranged )
+        does_it_hit(current_attack, monster_defence)
     elif k == 'm':
-        print 'You raise your...', player_melee
+        print 'You raise your', player_ready_melee
+        current_attack = ( player_ready_melee, player_melee )
+        does_it_hit(current_attack, monster_defence)
     else:
         which_attack()
+
+# Does it hit?
+def does_it_hit(current_attack, current_defence):
+    weapon = current_attack[0]
+    attacker_base = float(current_attack[1])
+    attacker_roll = r.d20()
+    defender_base = float(current_defence)
+    defender_roll= r.d20()
+    
+    print 'attacker:', attacker_base, '+', attacker_roll,'vs', 'defender:', defender_base, '+', defender_roll
+
+    if attacker_base + attacker_roll >= defender_base + defender_roll:
+        print colored.green('The'), colored.green(weapon), colored.green('hits!')
+    else:
+        print colored.red('The'), colored.red(weapon), colored.red('misses!')
+    fight_or_flight()
     
 
-    # Does it hit?
 
     # How much damage?
 
