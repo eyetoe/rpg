@@ -12,7 +12,8 @@ class TestApp(npyscreen.NPSApp):
         fn = F.add(npyscreen.TitleFilename, name = "Filename:")
         dt = F.add(npyscreen.TitleDateCombo, name = "Date:")
         cb = F.add(npyscreen.Checkbox, name = "A Checkbox")
-        s = F.add(npyscreen.TitleSlider, out_of=12, name = "Slider")
+        #s = F.add(npyscreen.TitleSlider, out_of=12, name = "Slider")
+        s = F.add(npyscreen.TitleSlider, out_of=100, name = "Slider")
         ml= F.add(npyscreen.MultiLineEdit, 
             value = """try typing here! Mutiline text, press ^R to reformat.\nPress ^X for automatically created list of menus""", 
             max_height=5, rely=9)
